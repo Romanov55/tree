@@ -1,7 +1,6 @@
 import {
   mkdir, mkfile, isFile, getChildren, getName, getMeta,
-} from '../tree/@hexlet-immutable-fs-trees.md';
-
+} from '../tree/@hexlet-immutable-fs-trees.md'
 const tree = mkdir('my documents', [
   mkfile('avatar.jpg', { size: 100 }),
   mkfile('passport.jpg', { size: 200 }),
