@@ -1,6 +1,8 @@
+import _ from 'lodash';
 import {
   mkdir, mkfile, isFile, getChildren, getName, getMeta,
-} from '../tree/@hexlet-immutable-fs-trees.md'
+} from '@hexlet/immutable-fs-trees';
+
 const tree = mkdir('my documents', [
   mkfile('avatar.jpg', { size: 100 }),
   mkfile('passport.jpg', { size: 200 }),
@@ -25,4 +27,4 @@ export const compressImages = (node) => {
   return mkdir(getName(node), newChildren, newMeta)
 }
 
-console.log(compressImages(tree))
+console.log(JSON.stringify(compressImages(tree)))
