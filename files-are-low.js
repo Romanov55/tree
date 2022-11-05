@@ -18,17 +18,15 @@ const changeOwner = (tree) => {
   const newMeta = _.cloneDeep(getMeta(tree));
 
   if (isFile(tree)) {
-    // Возвращаем обновлённый файл
+
     return mkfile(name.toLowerCase(), newMeta);
   }
 
   const children = getChildren(tree);
 
-  // Ключевая строчка
-  // Вызываем рекурсивное обновление каждого ребёнка
   const newChildren = children.map(changeOwner);
   return mkdir(name, newChildren, newMeta);
 
 };
 
-console.log(JSON.stringify(changeOwner(tree)))
+changeOwner(tree)
