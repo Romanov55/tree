@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import {
-  mkdir, mkfile, isFile, getChildren, getName, getMeta, isDirectory,
+  mkdir, mkfile, isFile, getChildren, getName, getMeta,
 } from '@hexlet/immutable-fs-trees';
 
 const tree = mkdir('/', [
